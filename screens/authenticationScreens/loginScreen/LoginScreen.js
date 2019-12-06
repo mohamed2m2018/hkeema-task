@@ -29,4 +29,8 @@ const LoginScreen = () => {
   );
 };
 
+LoginScreen.navigationOptions = ({navigation}) => ({
+  headerTitle: 'login screen',
+});
+
 export default LoginScreen;
