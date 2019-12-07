@@ -4,10 +4,6 @@ import {Icon} from 'native-base';
 const ProfileScreen = ({params}) => (
   <View>
     <Text>ProfileScreen</Text>
-    <Image
-      source={{uri: 'https://i.ibb.co/ssCDXc3/task-image.jpg'}}
-      style={{width: 30, height: 30}}
-    />
   </View>
 );
 
@@ -17,7 +13,7 @@ ProfileScreen.navigationOptions = {
   tabBarIcon: ({tintColor}) => (
     <Image
       source={{uri: 'https://i.ibb.co/ssCDXc3/task-image.jpg'}}
-      style={{width: 28, height: 28,borderRadius:50}}
+      style={{width: 28, height: 28, borderRadius: 50}}
     />
   ),
 };
