@@ -10,11 +10,11 @@ export default (state=INITIAL_STATE,action)=>{
 
 
     switch(action.type){
-        // case actionTypes.GET_CATEGORIES_START:
-        //     return {
-        //       ...state,
-        //       getServicesLoading: true,
-        //     };
+        case actionTypes.GET_CATEGORIES_START:
+            return {
+              ...state,
+              getServicesLoading: true,
+            };
       
         case actionTypes.GET_CATEGORIES_FINISH:
              return {

@@ -25,7 +25,7 @@ const optionsListItems = navigation => [
     iconName: 'location-pin',
     iconType: 'Entypo',
     text:'Book House Visits',
-    onPress: () => navigation.navigate('Book'),
+    onPress: () => navigation.navigate('HouseCall'),
   },
   
 ];

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Text, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity, Dimensions} from 'react-native';
 import {styles} from './DefaultButtonStyles';
 
 const DefaultButton = ({
@@ -9,7 +9,8 @@ const DefaultButton = ({
   swapColors,
   specifiedColor,
   specifiedFontColor,
-  specifiedFontSize
+  specifiedFontSize,
+  big
 }) => {
   const [buttonColor, changeButtonColor] = useState('#F7F4E1');
   const [textColor, changeTextColor] = useState('#8C9999');
@@ -27,6 +28,8 @@ const DefaultButton = ({
     }
   };
 
+  const bigStyle = {width: Dimensions.get('window').width*0.9,borderRadius:0,margin:0};
+
   return (
     <TouchableOpacity
       style={[
@@ -38,6 +41,7 @@ const DefaultButton = ({
           borderRadius: 20,
           height: 40,
           justifyContent: 'center',
+          ...(big?bigStyle:{})
         },
         style,
       ]}
@@ -46,9 +50,9 @@ const DefaultButton = ({
       <Text
         style={{
           textAlign: 'center',
-          color: specifiedFontColor?specifiedFontColor:textColor,
+          color: specifiedFontColor ? specifiedFontColor : textColor,
           fontWeight: 'bold',
-          fontSize: specifiedFontSize?specifiedFontSize:18,
+          fontSize: specifiedFontSize ? specifiedFontSize : 18,
         }}>
         {children}
       </Text>

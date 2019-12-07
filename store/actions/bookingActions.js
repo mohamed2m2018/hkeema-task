@@ -2,9 +2,9 @@ import axios from 'axios';
 import * as actionTypes from './actionTypes';
 import {serviceCategoriesAPi} from '../../utils/httpService';
 export const getCategories = callBack => dispatch => {
-//   dispatch({
-//     type: actionTypes.GET_CATEGORIES_START,
-//   });
+  dispatch({
+    type: actionTypes.GET_CATEGORIES_START,
+  });
 
   axios
     .get(serviceCategoriesAPi)

@@ -8,6 +8,8 @@ import LoginScreen from './authenticationScreens/loginScreen/LoginScreen';
 import RegistrationScreen from './authenticationScreens/registrationScreen/RegistrationScreen';
 import ClinicVisitScreen from './stackScreens/ClinicVisitScreen';
 
+import HouseCallScreen from './stackScreens/HouseCallsScreen';
+
 
 export default screens={
     HomeScreen,
@@ -18,4 +20,5 @@ export default screens={
     LoginScreen,
     RegistrationScreen,
     ClinicVisitScreen,
+    HouseCallScreen
 }

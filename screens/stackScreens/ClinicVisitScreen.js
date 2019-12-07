@@ -14,11 +14,10 @@ const ClinicVisitScreen = ({
   useEffect(() => {
     getCategories();
   }, []);
-
   return !getServicesLoading ? (
     <ScrollView>
       <Text style={styles.specialityText}>Speciality</Text>
-      <View style={{flexDirection: 'row', maxWidth: '98%', flexWrap: 'wrap'}}>
+      <View style={styles.specialityContainer}>
         {serviceCategories.map(category => (
           <DefaultButton swapColors key={category.id}>
             {category.name}
@@ -26,27 +25,9 @@ const ClinicVisitScreen = ({
         ))}
       </View>
 
-      <View
-        style={{
-          backgroundColor: '#F6FBF1',
-          padding: 15,
-          margin: 10,
-        }}>
-        <View
-          style={{
-            width: '100%',
-            flexDirection: 'row',
-            alignItems: 'center',
-            maxWidth: '100%',
-            flexWrap: 'wrap',
-          }}>
-          <Text
-            style={{
-              color: 'black',
-              fontWeight: 'bold',
-              fontSize: 14,
-              padding: 10,
-            }}>
+      <View style={styles.QuestionContainer}>
+        <View style={styles.TextAndIconContainer}>
+          <Text style={styles.questionText}>
             You don't know the speciality yet?{' '}
           </Text>
           <DefaultButton
@@ -56,17 +37,27 @@ const ClinicVisitScreen = ({
             Book Now
           </DefaultButton>
         </View>
-        <Text style={{paddingLeft: 10}}>Use online consultation now. </Text>
+        <Text style={styles.callToActionText}>
+          Use online consultation now.{' '}
+        </Text>
       </View>
 
       <Text style={styles.specialityText}>Location</Text>
 
-      <KeyboardAvoidingView style={{margin: 20}}>
+      <KeyboardAvoidingView style={styles.keyBoardAvoidingViewStyling}>
         <Item rounded>
-          <Icon style={{paddingLeft: 10}} name="ios-search" />
+          <Icon style={style.iconStyling} name="ios-search" />
           <Input placeholder="Search" />
         </Item>
       </KeyboardAvoidingView>
+
+      <DefaultButton
+        style={{margin: 17}}
+        specifiedColor="#009FA7"
+        specifiedFontColor="white"
+        big>
+        Show Results ( 32 )
+      </DefaultButton>
     </ScrollView>
   ) : (
     <Spinner />

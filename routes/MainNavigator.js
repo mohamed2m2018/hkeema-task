@@ -14,6 +14,7 @@ const MainNavigator = createStackNavigator(
     Login: screens.LoginScreen,
     Register: screens.RegistrationScreen,
     ClinicVisit: screens.ClinicVisitScreen,
+    HouseCall: screens.HouseCallScreen,
   },
   {
     initialRouteName: 'Tab',
@@ -107,7 +108,7 @@ const MainNavigator = createStackNavigator(
                       paddingLeft: 10,
                       color: '#92A2B1',
                     }}>
-                    I am your medical arm and I'm always happy to help
+                    I am your medical arm and I'm always happy to help ☺
                   </Text>
                 </View>
               </View>
