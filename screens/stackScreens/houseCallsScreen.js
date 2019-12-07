@@ -26,7 +26,7 @@ const HouseCallScreen = ({sendLocation, getPostingLoading, navigation}) => {
       setPosition(position);
     });
     navigation.setParams({cancelRequest});
-  }, [requestCancelled]);
+  }, []);
 
   const {latitude} = position.coords;
   const {longitude} = position.coords;
@@ -67,7 +67,7 @@ const HouseCallScreen = ({sendLocation, getPostingLoading, navigation}) => {
           }}></Marker>
       </MapView>
       <View style={styles.waitingForDrApprovalContainer}>
-        {getPostingLoading&&!requestCancelled ? (
+        {getPostingLoading && !requestCancelled ? (
           <View style={{flexDirection: 'row'}}>
             <Text style={styles.waitingForDrApprovalText}>
               Waiting for Doctor's approval...
