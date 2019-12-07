@@ -10,12 +10,15 @@ const RecordScreen = ({params}) => {
   );
 };
 
-
 RecordScreen.navigationOptions = {
   tabBarLabel: 'Record',
 
   tabBarIcon: ({tintColor}) => (
-    <Icon type="AntDesign" name="heart" style={{color: tintColor}} />
+    <Icon
+      type="AntDesign"
+      name="heart"
+      style={{color: tintColor, fontSize: 28}}
+    />
   ),
 };
 export default RecordScreen;

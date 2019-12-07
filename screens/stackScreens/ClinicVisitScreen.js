@@ -46,7 +46,7 @@ const ClinicVisitScreen = ({
 
       <KeyboardAvoidingView style={styles.keyBoardAvoidingViewStyling}>
         <Item rounded>
-          <Icon style={style.iconStyling} name="ios-search" />
+          <Icon style={styles.iconStyling} name="ios-search" />
           <Input placeholder="Search" />
         </Item>
       </KeyboardAvoidingView>

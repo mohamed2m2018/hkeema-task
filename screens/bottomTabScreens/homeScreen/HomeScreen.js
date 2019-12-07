@@ -26,7 +26,11 @@ const HomeScreen = ({navigation}) => (
 HomeScreen.navigationOptions = {
   tabBarLabel: 'Home',
   tabBarIcon: ({tintColor}) => (
-    <Icon type="Ionicons" name="ios-home" style={{color: tintColor}} />
+    <Icon
+      type="Ionicons"
+      name="ios-home"
+      style={{color: tintColor, fontSize: 28}}
+    />
   ),
 };
 export default HomeScreen;

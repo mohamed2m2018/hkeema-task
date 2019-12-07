@@ -1,6 +1,6 @@
 import axios from 'axios';
 import * as actionTypes from './actionTypes';
-import {sendLocationApi, setAuthToken} from '../../utils/httpService';
+import {sendLocationApi} from '../../utils/httpService';
 export const sendLocation = data => dispatch => {
   dispatch({
     type: actionTypes.SEND_LOCATION_START,
@@ -23,9 +23,5 @@ export const sendLocation = data => dispatch => {
     .catch(err => {
       console.log('fail');
       console.log(err.response.data);
-
-      dispatch({
-        type: actionTypes.SEND_LOCATION_FINISH,
-      });
     });
 };

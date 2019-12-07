@@ -1,7 +1,7 @@
 import * as actionTypes from '../actions/actionTypes';
 
 const INITIAL_STATE = {
-  getPostingLoading: false,
+  getPostingLoading: true,
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -9,7 +9,7 @@ export default (state = INITIAL_STATE, action) => {
     case actionTypes.SEND_LOCATION_START:
       return {
         ...state,
-        getServicesLoading: true,
+        getPostingLoading: true,
       };
 
     case actionTypes.SEND_LOCATION_FINISH:

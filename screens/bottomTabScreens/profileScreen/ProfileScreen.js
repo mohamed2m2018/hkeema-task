@@ -1,24 +1,25 @@
 import React from 'react';
-import { Text, View } from 'react-native';
-import { Icon } from 'native-base';
-const ProfileScreen = ({
-    params,
-}) => (
-    <View>
-        <Text>ProfileScreen</Text>
-    </View>
+import {Text, View, Image} from 'react-native';
+import {Icon} from 'native-base';
+const ProfileScreen = ({params}) => (
+  <View>
+    <Text>ProfileScreen</Text>
+    <Image
+      source={{uri: 'https://i.ibb.co/ssCDXc3/task-image.jpg'}}
+      style={{width: 30, height: 30}}
+    />
+  </View>
 );
 
 ProfileScreen.navigationOptions = {
-    title:'profile',
-    tabBarLabel: 'Profile',
-    tabBarIcon: ({tintColor}) => (
-      <Icon
-        type="AntDesign"
-        name="stepforward"
-        style={{color: tintColor, fontSize: 28}}
-      />
-    ),
-  };
+  title: 'profile',
+  tabBarLabel: 'Profile',
+  tabBarIcon: ({tintColor}) => (
+    <Image
+      source={{uri: 'https://i.ibb.co/ssCDXc3/task-image.jpg'}}
+      style={{width: 28, height: 28,borderRadius:50}}
+    />
+  ),
+};
 
 export default ProfileScreen;

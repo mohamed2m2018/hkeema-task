@@ -11,5 +11,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingLeft: 20,
   },
-  waitingForDrApprovalText: {color: '#039CA4'},
+  waitingForDrApprovalText: {color: '#039CA4',paddingTop:30,marginRight:10},
+  drApprovedText:{color: '#039CA4'}
 });

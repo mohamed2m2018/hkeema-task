@@ -18,7 +18,7 @@ BookScreen.navigationOptions = {
     <Icon
       type="Ionicons"
       name="ios-add-circle"
-      style={{color: tintColor, fontSize: 28}}
+      style={{color: tintColor, fontSize: 33}}
     />
   ),
 };
