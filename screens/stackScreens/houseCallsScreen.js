@@ -23,8 +23,22 @@ const HouseCallScreen = ({sendLocation, getPostingLoading, navigation}) => {
 
   useEffect(() => {
     Geolocation.getCurrentPosition(position => {
+      //setting the user's position as the position to appear on the map
       setPosition(position);
+      //sending the user's position
+      sendLocation({
+        s_latitude: position.coords.latitude,
+        d_latitude: '0.0922',
+        s_longitude: position.coords.longitude,
+        d_longitude: '0.0421',
+        s_gender: 'Any',
+        s_hours: '1',
+        service_type: '1',
+        distance: '1',
+        payment_mode: 'CASH',
+      });
     });
+
     navigation.setParams({cancelRequest});
   }, []);
 
@@ -33,8 +47,9 @@ const HouseCallScreen = ({sendLocation, getPostingLoading, navigation}) => {
 
   const onMapPress = e => {
     {
+      //set new pressed position by the user
       setPosition({coords: e.nativeEvent.coordinate});
-
+      //send new pressed position by the user
       sendLocation({
         s_latitude: e.nativeEvent.coordinate.latitude,
         d_latitude: '0.0922',
