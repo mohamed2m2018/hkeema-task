@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 
-import { Icon } from 'native-base';
+import {Icon} from 'native-base';
 
 const NotificationIndicator = () => (
   <View style={{width: 40}}>
